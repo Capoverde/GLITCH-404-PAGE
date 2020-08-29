@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css?family=VT323');
+
+:root
+{
+    --body-bg: #262626;
+    --font-c: #eee;
+}
+
+body
+{
+    font-family: 'VT323';
+    background: var(--body-bg);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a h1
+{
+    position: absolute;
+    top: 20%;
+    left :50%;
+    transform: translate(-59%,-50%);
+    color: var(--font-c);
+    background: #000;
+    text-shadow:  5px -8px 5px red;
+    text-shadow: 1px 1px 1px blue;
+    text-shadow: -1px 1px 1px green;
+}
+
+a h1::after
+{
+    content: 'GLITCH PRELOADER';
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    width: 100%;
+    transform: translate(-59%,-50%);
+    color: var(--font-c);
+    text-shadow:  2px -2px 1px red;
+}
+
+a h1::before
+{
+    content: 'GLITCH PRELOADER';
+    position: absolute;
+    top: 50%;
+    left: 59%;
+    width: 100%;
+    transform: translate(-59%,-50%);
+    color: var(--font-c);
+    text-shadow:  2px 2px 1px blue;
+}
+
+#drawing_container
+{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: -10px;
+    bottom: 0;
+    right: 0;
+    width: 325px;
+    height: 450px;
+    color: #fff;
+    -webkit-box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.75);
+}
+
+
+canvas
+{
+    width: 550px;
+    height:450px;
+}

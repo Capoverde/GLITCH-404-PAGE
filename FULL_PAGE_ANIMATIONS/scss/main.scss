@@ -1,0 +1,31 @@
+@import "./partials/settings/normalize";
+@import "./partials/settings/globals";
+
+.s1 {
+  background-image: url("https://source.unsplash.com/random/600X400");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    background: linear-gradient(-45deg, #74d2f5, #17ffb9);
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 0.8;
+    @include fluidSize(30px, 230px);
+  }
+}
+
+.s2 {
+  p {
+    text-align: center;
+  }
+}

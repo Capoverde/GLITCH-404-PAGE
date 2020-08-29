@@ -1,0 +1,39 @@
+.blue {
+  width: 100%;
+  height: 37%;
+  background: rgb(255, 255, 255);
+}
+
+.image {
+  width: 100%;
+  background: url(NB.jpeg);
+  background-size: cover;
+  position: relative;
+  display: flex;
+  padding: 50px;
+  box-sizing: border-box;
+  justify-content: center;
+  height: 73%;
+}
+
+#container {
+  width: 100%;
+  position: absolute;
+  bottom: -6px;
+  overflow: hidden;
+}
+
+#container svg {
+  width: 200%;
+  position: relative;
+  animation: move-left 5s linear infinite;
+}
+
+@keyframes move-left {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -100%;
+  }
+}

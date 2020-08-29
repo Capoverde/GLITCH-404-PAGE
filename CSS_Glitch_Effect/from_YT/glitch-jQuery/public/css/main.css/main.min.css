@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css?family=Orbitron:400,500,700,900|Press+Start+2P|Rubik+Mono+One&display=swap&subset=latin-ext");
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #080808;
+  height: 100vh;
+  width: 100%;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.966);
+  z-index: 3;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #020202;
+}
+
+.container .glitch-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  animation: slides 60s linear infinite 30s;
+  -webkit-animation: slides 60s linear infinite 30s;
+  background: url("./syria1.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: brightness(50%);
+  filter: brightness(50%);
+  -webkit-filter: grayscale(80%);
+  filter: grayscale(80%);
+  -webkit-filter: hue-rotate(25deg);
+  filter: hue-rotate(25deg);
+  opacity: 0.5;
+}
+
+.container .glitch-img a {
+  text-decoration: none;
+}
+
+.container .glitch-img a p {
+  z-index: 2;
+  position: relative;
+  padding: 5px;
+  width: 100%;
+  margin: 600px 0px;
+  text-align: center;
+  line-height: 60px;
+  letter-spacing: 4px;
+  color: #f7f7f7;
+  background: #000000;
+  font-size: 2rem;
+  font-family: "Press Start 2P", cursive;
+  text-transform: uppercase;
+}
+
+.container .glitch-img a p::before, .container .glitch-img a p::after {
+  position: absolute;
+  top: 3%;
+  content: attr(data-text);
+  z-index: -1;
+}
+
+.container .glitch-img a p::before {
+  color: red;
+  bottom: 0;
+  left: -2px;
+}
+
+.container .glitch-img a p::after {
+  color: blue;
+  bottom: 0;
+  left: 15px;
+}
+
+@-webkit-keyframes slides {
+  0% {
+    background: url("./syria1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  10% {
+    background: url("./syria2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  20% {
+    background: url("./syria3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  30% {
+    background: url("./syria4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  40% {
+    background: url("./syria5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  50% {
+    background: url("./syria6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  60% {
+    background: url("./syria7.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  70% {
+    background: url("./syria8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  80% {
+    background: url("./syria9.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  90% {
+    background: url("./syria10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  100% {
+    background: url("./syria6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+@keyframes slides {
+  0% {
+    background: url("./syria1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  10% {
+    background: url("./syria2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  20% {
+    background: url("./syria3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  30% {
+    background: url("./syria4.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  40% {
+    background: url("./syria5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  50% {
+    background: url("./syria6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  60% {
+    background: url("./syria7.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  70% {
+    background: url("./syria8.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  80% {
+    background: url("./syria9.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  90% {
+    background: url("./syria10.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  100% {
+    background: url("./syria6.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}

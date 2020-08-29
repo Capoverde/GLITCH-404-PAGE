@@ -1,0 +1,117 @@
+/*This is the body background colour and is non-essential to functionality*/
+body {
+  background: #3b3d3d;
+}
+
+/*This is a box holding the titles and is non-essential to functionality*/
+.homepagebox {
+  max-width: 80%;
+  position: absolute;
+  padding: 80px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-top: 1px solid #b1a8e5;
+  border-right: 1px solid #b1a8e5;
+  border-bottom: 1px solid #abc9dc;
+  border-left: 1px solid #abc9dc;
+}
+
+/*This is styling for the static h1 tag with the word 'communication'*/
+h1 {
+  font-family: "Avenir Next", "Roboto", sans-serif;
+  font-size: 5vw;
+  color: #abc9dc;
+  text-align: center;
+  font-size: 5vw;
+  line-height: 0.4;
+  letter-spacing: -0.04em;
+  font-weight: 100;
+  margin-top: -13px;
+  padding: 0;
+}
+
+/*This is the dynamic h1 class where all the changes are controlled from*/
+.changingtext:before {
+  content: "";
+  color: #b1a8e5;
+  text-align: center;
+  font-family: "Avenir Next", "Roboto", sans-serif;
+  font-size: 5vw;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  animation-name: mychangea;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+/*These are the keyframes that change the titles in the dynamic h1; I've created a sequence with varying opacities to produce a smoother transition between titles - feel free to further tweak these to your preference*/
+@keyframes mychangea {
+  0% {
+    content: "humanising";
+    opacity: 0.58;
+  }
+  10% {
+    content: "humanising";
+    opacity: 1;
+  }
+  19% {
+    content: "humanising";
+    opacity: 0;
+  }
+  20% {
+    content: "energising";
+    opacity: 0;
+  }
+  30% {
+    content: "energising";
+    opacity: 1;
+  }
+  39% {
+    content: "energising";
+    opacity: 0;
+  }
+  40% {
+    content: "socialising";
+    opacity: 0;
+  }
+  50% {
+    content: "socialising";
+    opacity: 1;
+  }
+  59% {
+    content: "socialising";
+    opacity: 0;
+  }
+  60% {
+    content: "monetising";
+    opacity: 0;
+  }
+  70% {
+    content: "monetising";
+    opacity: 1;
+  }
+  79% {
+    content: "monetising";
+    opacity: 0;
+  }
+  80% {
+    content: "transforming";
+    opacity: 0;
+  }
+  90% {
+    content: "transforming";
+    opacity: 1;
+  }
+  99% {
+    content: "transforming";
+    opacity: 0;
+  }
+  100% {
+    content: "humanising";
+    opacity: 0;
+  }
+}

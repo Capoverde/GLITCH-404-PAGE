@@ -1,0 +1,19 @@
+{
+  "name": "css_only_effects",
+  "version": "1.0.0",
+  "description": "menu_hover_blur_effect",
+  "main": "main.js",
+  "scripts": {
+    "start": "babel src/main.js --watch --out-file dist/bundle.js",
+    "build": "babel --presets es2015 src -d dist"
+  },
+  "keywords": [
+    "menu"
+  ],
+  "author": "Piotr",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-env": "^2.4.1"
+  }
+}

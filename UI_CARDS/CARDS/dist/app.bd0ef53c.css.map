@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/app.css"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA","file":"app.bd0ef53c.css","sourceRoot":"..","sourcesContent":["/* reset */\n* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box;\n}\n\n/* variables */\n\n$body-bg: #161616;\n\nhtml,\nbody {\n  overflow: hidden;\n}\n"]}

@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import 'reset';
+@import 'vars';
+@import 'mixins';
+@import 'header';
+@import 'footer';
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  background: map-get($page-colors, body-bg );
+
+  .loader{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: map-get($loader-colors, bg );
+    animation: rotation 1s linear infinite;
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      background: map-get($loader-colors, before );
+    }
+
+    div{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: map-get($loader-colors, bg );
+      animation: animate 1s linear infinite;
+      // box-shadow: $hbxs;
+
+      &::before{
+        content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      right: 2px;
+      bottom: 2px;
+      background: map-get($loader-colors, before );
+      }
+
+      &:nth-child(1){
+        top: -100%;
+        left: -2px;
+        transform-origin: bottom right;
+
+        &::before{
+          background: map-get($loader-colors, before1 );
+        }
+      }
+
+      &:nth-child(2){
+        right: -100%;
+        top: -2px;
+        transform-origin: bottom left;
+
+        &::before{
+          background: map-get($loader-colors, before2 );
+        }
+      }
+
+      &:nth-child(3){
+        bottom: -100%;
+        left: 2px;
+        transform-origin: top left;
+
+        &::before{
+          background: map-get($loader-colors, before3 );
+        }
+      }
+
+      &:nth-child(4){
+        left: -100%;
+        top: 2px;
+        transform-origin: top right;
+
+        &::before{
+          background: map-get($loader-colors, before4 );
+        }
+      }
+    }
+  }
+}
+
+// ---------------------- KEYFRAMES -------------------------- //
+
+@keyframes animate {
+  0%{
+    transform: rotate(0deg);
+  }
+  50%,100%{
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes rotation {
+  0%{
+    transform: rotate(90deg);
+  }
+  50%,100%{
+    transform: rotate(0deg);
+  }
+}

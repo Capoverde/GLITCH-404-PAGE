@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+*, ::before, ::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 20vh;
+  background: #000;
+  -webkit-box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 20px 0px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+  text-align: center;
+  line-height: 20vh;
+  font-size: 3rem;
+  font-family: 'Permanent Marker';
+}
+
+header h1 a {
+  color: #e6b200;
+}
+
+header h1 a:hover {
+  -webkit-transition: .3s;
+  transition: .3s;
+  color: #ffc600;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120vh;
+  background: #131b30;
+}
+
+.container .loader {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  background: red;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+}
+
+.container .loader::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #fff;
+}
+
+.container .loader div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+  -webkit-animation: animate 1s linear infinite;
+          animation: animate 1s linear infinite;
+}
+
+.container .loader div::before {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #fff;
+}
+
+.container .loader div:nth-child(1) {
+  top: -100%;
+  left: -2px;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+}
+
+.container .loader div:nth-child(1)::before {
+  background: #ff0;
+}
+
+.container .loader div:nth-child(2) {
+  right: -100%;
+  top: -2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.container .loader div:nth-child(2)::before {
+  background: #2daff2;
+}
+
+.container .loader div:nth-child(3) {
+  bottom: -100%;
+  left: 2px;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+}
+
+.container .loader div:nth-child(3)::before {
+  background: #11c28d;
+}
+
+.container .loader div:nth-child(4) {
+  left: -100%;
+  top: 2px;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
+}
+
+.container .loader div:nth-child(4)::before {
+  background: #921bd6;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+}
+
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50%, 100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*# sourceMappingURL=main.min.css.map */

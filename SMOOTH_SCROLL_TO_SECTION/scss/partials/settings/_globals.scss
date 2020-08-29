@@ -1,0 +1,93 @@
+@import "../mixins/rwd";
+@import "../mixins/prefixes";
+@import "../mixins/custom";
+
+// -------------- variables -------------- //
+// backgrounds:
+$body-bg: #161616;
+$header-bg: linear-gradient(145deg, #334666, #586084, #8490a3, #adb5c2);
+
+// colors:
+$main-c: #dddddd;
+$hero-c: #ffc600;
+$btn-border-c: #000000;
+
+// ------------- settings -------------- //
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  background: $body-bg;
+  min-height: 100vh;
+  @include antialiasing;
+}
+
+header {
+  @include flexCenter(mobile);
+  width: 100%;
+  height: 60vh;
+  background: $header-bg;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 15px;
+}
+
+h1 {
+  @include fluidSize(30px, 100px);
+}
+
+h2 {
+  padding: 20px;
+  background: $hero-c;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  @include link-hover(color, 0.3s, #681212);
+  @include text-shadow();
+}
+
+.btn {
+  padding: 10px 25px;
+  border: 4px solid $btn-border-c;
+  @include fluidSize(13px, 20px);
+  letter-spacing: 5px;
+
+  &:hover {
+    @include transition(all, 0.3);
+    border-color: #681212;
+    @include scale(0.97);
+  }
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  @include flexCenter(mobile);
+
+  h3 {
+    @include fluidSize(30px, 400px);
+  }
+  &:nth-child(odd) {
+    background: lighten($body-bg, 20);
+  }
+}
+
+nav {
+  width: 100%;
+  position: fixed !important;
+  @include z-index(navigation);
+
+  .nav-link {
+    color: $main-c !important;
+  }
+}

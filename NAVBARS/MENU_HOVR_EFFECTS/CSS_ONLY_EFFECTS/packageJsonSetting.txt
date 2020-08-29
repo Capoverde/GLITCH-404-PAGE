@@ -1,0 +1,6 @@
+"scripts:": {
+    "start": "babel src/main.js --watch --out-file dist/bundle.js",
+    "build": "babel --presets es2015 src -d dist"
+  }
+  npm init
+  npm i babel babel-env --save-dev

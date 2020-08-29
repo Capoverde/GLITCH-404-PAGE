@@ -1,0 +1,13 @@
+@import "vars";
+@import "mixins";
+@import "reset";
+@import "header";
+@import "footer";
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: map-get($siteColors, body-bg);
+}

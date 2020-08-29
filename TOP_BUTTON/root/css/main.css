@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400|Muli:200,300,400');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bd-bg: #363636;
+  --hero-c: #ffc30b;
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body {
+  background: var(--bd-bg);
+  font-family: 'Lato';
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+  border-bottom: 1px solid #000;
+}
+
+section:nth-child(odd) {
+  background: #3494E6;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #EC6EAD, #3494E6);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EC6EAD, #3494E6);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+section:nth-child(even) {
+  background: #0f0c29;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  ;
+}
+
+footer {
+  left: 0;
+  right: 0;
+  height: 40vh;
+  background: #232526;
+  display: flex;
+  justify-content: space-around;
+  justify-items: center;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.foot {
+  margin: 30px;
+  padding: 10px;
+  width: calc(33.333% - 20px);
+  height: 20vh;
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h3 {
+  color: #fff;
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.RODO {
+  position: fixed;
+  top: -50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 5px;
+  background: #833ab4;
+  text-align: justify;
+  padding: 10px 200px;
+  overflow: scroll;
+  color: #fff;
+  transition: .5s;
+  z-index: 99;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fcb045, #fd1d1d, #833ab4);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.showRodo {
+  top: 50%;
+}
+
+.hideRodo {
+  top: -50%;
+}
+
+.x {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  transform: translate(-50%, -50%);
+  color: rgb(153, 32, 32);
+  font-size: 40px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.x:hover {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+/* -------------------------------------------------- */
+
+.TOP {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 10%;
+  right: -15%;
+  text-align: center;
+  line-height: 60px;
+  color: #fff;
+  font-size: 16px;
+  background: #F00000;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: .5s;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 7px 1px rgba(0, 0, 0, 0.75);
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DC281E, #F00000);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DC281E, #F00000);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.showTOP {
+  right: 3%;
+}

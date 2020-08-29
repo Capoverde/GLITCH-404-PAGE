@@ -1,0 +1,85 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body
+{
+  position: relative;
+  background-color: pink;
+}
+
+ul
+{
+  position: absolute;
+  top: 200px;
+  left: 30%;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: -1px 7px 16px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 7px 16px -2px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 16px -2px rgba(0,0,0,0.75);
+}
+
+ul li
+{
+  position: relative; /* -- to załatwia pojawiania się odpowiedniego tooltipa nad kazdą ikonką*/
+  padding: 20px 40px;
+  background-color: #504d4d;
+  color: #ffffff;
+  list-style: none;
+  font-size: 2em;
+  cursor: pointer;
+  transition: .5s;
+}
+
+ul li:hover
+{
+  color: pink;
+}
+
+/*    ---------------------------    */
+/*    ------    TOOLTIP   -------    */
+/*    ---------------------------    */
+
+span
+{
+  position: absolute;
+  top: -45px;
+  left: -3%;
+  width: 150px;
+  padding: 10px 5px;
+  margin-right: 50px;
+  font-size: 15px;
+  text-align: center;
+  background-color: pink;
+  color: pink;
+  background-color: #504d4d;
+  border: 1px solid #ffffff;
+  opacity: 0;
+  visibility: hidden;
+  transition: .6s;
+  -webkit-box-shadow: -1px 7px 16px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 7px 16px -2px rgba(0,0,0,0.75);
+  box-shadow: -1px 7px 16px -2px rgba(0,0,0,0.75);
+}
+
+ul li:hover span
+{
+  opacity: 1;
+  visibility: visible;
+}
+
+/* .romb
+{
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border: 1px solid #fff;
+  transform: translate(45px, 7px) rotate(45deg);
+  z-index: -1;
+} */

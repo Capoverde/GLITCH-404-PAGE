@@ -1,0 +1,2 @@
+body{background:#353434}.container{padding:40px}.container h1{text-align:center}.container h1 a{color:lightgrey;text-decoration:none}.container h1 a:hover{-webkit-transition:0.3s;transition:0.3s;color:tomato}.container p{padding:0 20px;color:grey;position:relative;position:relative}.container p::after{content:"";position:absolute;left:0;top:0;border:1em solid transparent;border-left-color:red}.container p::before{content:"";position:absolute;left:97%;top:0;border:1em solid transparent;border-right-color:green}
+/*# sourceMappingURL=main.min.css.map */

@@ -1,0 +1,14 @@
+// triangel mixin:
+
+@mixin triangle($sudo, $size, $side, $color, $left: 0, $top: 0) {
+  position: relative;
+
+  &::#{$sudo} {
+    content: "";
+    position: absolute;
+    left: $left;
+    top: $top;
+    border: $size solid transparent;
+    border-#{$side}-color: $color;
+  }
+}

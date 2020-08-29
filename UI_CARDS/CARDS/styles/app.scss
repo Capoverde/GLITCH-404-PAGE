@@ -1,0 +1,298 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext");
+
+/* reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ------- variables ------- */
+// backgrunds:
+$body-bg: #080e30;
+$card-bg: #151515;
+$card-hero-bg: #9bdc28; /*#e1e1e10a;*/
+$bd-gr-bg: linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 115, 1) 38%, rgba(0, 212, 255, 1) 100%);
+
+// colors:
+$header-c: #ffffff;
+$text-c: #dddddd;
+$link-hv-c: $card-hero-bg;
+$after-c: #e1e1e10a;
+$span-c: #111;
+
+html,
+body {
+  overflow: hidden;
+}
+
+body {
+  height: 300vh;
+  background: $bd-gr-bg;
+}
+
+.site__header {
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: lighten($body-bg, 20);
+  background-image: url("/img/trianglify-lowres.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+a {
+  text-decoration: none;
+  color: $header-c;
+
+  &:hover {
+    transition: 0.5s;
+    color: $link-hv-c;
+  }
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 3em;
+  color: $card-hero-bg;
+  text-shadow: 2px 3px #ffffff7e;
+}
+
+.site__main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+/*
+   ##################################################
+   ##################     CARD    ###################
+   ##################################################
+*/
+
+.container {
+  position: relative;
+
+  .card {
+    position: relative;
+    margin-top: 30px;
+    width: 320px;
+    height: 450px;
+    color: $text-c;
+    background: $card-bg;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    overflow: hidden;
+    -webkit-box-shadow: 0px 4px 14px -1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 4px 14px -1px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 4px 14px -1px rgba(0, 0, 0, 0.75);
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: $card-hero-bg;
+      clip-path: circle(150px at 80% 20%);
+      transition: 0.5s ease-in-out;
+    }
+
+    &:hover::before {
+      cursor: pointer;
+      clip-path: circle(300px at 80% -20%);
+    }
+
+    &::after {
+      content: "Nike";
+      position: absolute;
+      top: 30%;
+      left: -20%;
+      font-size: 12em;
+      font-weight: 800;
+      font-style: italic;
+      color: $after-c;
+    }
+
+    .img-Box {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -moz-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      -o-transform: translateY(-50%);
+      z-index: 10000;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      .img-Box {
+        top: 0%;
+        transform: TranslateY(0%);
+        -webkit-transform: TranslateY(0%);
+        -moz-transform: TranslateY(0%);
+        -ms-transform: TranslateY(0%);
+        -o-transform: TranslateY(0%);
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &:hover {
+      .contentBx {
+        .size {
+          opacity: 1;
+          visibility: visible;
+          transition-delay: 0.5s;
+        }
+        .color {
+          opacity: 1;
+          visibility: visible;
+          transition-delay: 0.6s;
+        }
+      }
+    }
+
+    .contentBx {
+      position: absolute;
+      bottom: 5%;
+      width: 100%;
+      height: 100px;
+      text-align: center;
+      transition: 1s;
+      z-index: 10;
+
+      h2 {
+        position: relative;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $header-c;
+      }
+
+      .size,
+      .color {
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 8px 20px;
+        transition: 0.5s;
+
+        h3 {
+          color: $header-c;
+          font-weight: 300;
+          font-style: 14px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-right: 10px;
+        }
+
+        span {
+          width: 26px;
+          height: 26px;
+          text-align: center;
+          line-height: 26px;
+          font-style: 14px;
+          display: inline-block;
+          color: $span-c;
+          background: $header-c;
+          margin: 0 5px;
+          transition: 0.5s;
+          border-radius: 4px;
+          -webkit-border-radius: 4px;
+          -moz-border-radius: 4px;
+          -ms-border-radius: 4px;
+          -o-border-radius: 4px;
+          cursor: pointer;
+
+          &:hover {
+            background: $card-hero-bg;
+          }
+        }
+      }
+
+      .color {
+        opacity: 0;
+        visibility: hidden;
+        span {
+          width: 20px;
+          height: 20px;
+          background: lighten($card-hero-bg, 30);
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -moz-border-radius: 50%;
+          -ms-border-radius: 50%;
+          -o-border-radius: 50%;
+
+          &:nth-child(2) {
+            background: #9bdc28;
+          }
+          &:nth-child(3) {
+            background: #03a9f4;
+          }
+          &:nth-child(4) {
+            background: #e91e63;
+          }
+        }
+      }
+
+      a {
+        display: inline-block;
+        padding: 10px 20px;
+        background: $header-c;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        margin-top: 10px;
+        font-weight: 600;
+        color: $card-hero-bg;
+        transform: translateY(50px);
+        -webkit-transform: translateY(50px);
+        -moz-transform: translateY(50px);
+        -ms-transform: translateY(50px);
+        -o-transform: translateY(50px);
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        opacity: 0;
+        &:hover {
+          background: $card-hero-bg;
+          color: $header-c;
+        }
+      }
+    }
+
+    &:hover {
+      .contentBx {
+        height: 210px;
+
+        a {
+          opacity: 1;
+          transform: translateY(0px);
+          -webkit-transform: translateY(0px);
+          -moz-transform: translateY(0px);
+          -ms-transform: translateY(0px);
+          -o-transform: translateY(0px);
+          transition-delay: 0.5s;
+        }
+      }
+    }
+  }
+}

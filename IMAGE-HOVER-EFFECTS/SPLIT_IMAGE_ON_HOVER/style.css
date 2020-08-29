@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400|Muli:200,300,400');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400');
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+*, *::before, *::after
+{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+ 
+:root{
+--bd-bg:#1f2130;
+--hero-c:#ffc30b;
+--bx-bg: #000;
+--f-c: #ddd;
+} 
+
+body{
+display:flex;
+align-items: center;
+justify-content: center;
+height: 100vh;
+background: var(--bd-bg);
+font-family: 'Roboto';
+}
+
+h1{
+ position: absolute;
+ top: 5%;
+ left: 50%; 
+ transform: translate(-50%, -50%);
+}
+
+h1 a{
+text-decoration: none;
+color: var(--hero-c);
+font-size: 1.2em;
+transition: .2s;
+cursor: pointer;}
+
+h1 a:hover{color: red;}
+
+.box{
+  position: relative;
+  height: 400px;
+  width: 600px;
+  background: var(--bx-bg);
+  overflow: hidden;
+  box-shadow: 0 0 60px 20px rgba(0,0,0,.5);
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.box .image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:  0;
+  left: 0;
+  display: flex;
+}
+
+.box:hover .image span{
+  transform: translateY(-100%);
+}
+
+.box .image span{
+  width: 25%;
+  height: 100%;
+  background: url('./assets/img/split-effect.png');
+  transition: .5s;
+}
+
+.box .image span:nth-child(1){
+  background-position:  0;
+  transition-delay: 0s;
+}
+
+.box .image span:nth-child(2){
+  background-position: 33.33%;
+  transition-delay: .1s;
+}
+
+.box .image span:nth-child(3){
+  background-position: 66.66%;
+  transition-delay: .2s;
+}
+
+.box .image span:nth-child(4){
+  background-position:  100%;
+  transition-delay: .3s;
+}
+
+h2{
+  color: var(--f-c);
+  padding: 10px;
+  text-transform: uppercase;
+  color: var(--hero-c);
+}
+
+p{
+  color: var(--f-c);
+  font-weight: 100;
+}
+
+.box .content{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top:  0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 60px;
+  box-sizing: border-box;
+  text-align: center;
+  transition: 1.2s;
+  transform: translateY(100%);
+}
+
+.box:hover .content{
+  transform: translateY(0);
+}

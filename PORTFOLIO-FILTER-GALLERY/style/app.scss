@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//##########################################
+//#################  vars  #################
+//##########################################
+
+//================
+//  colors
+//================
+$main-c: #eee;
+
+//================
+//   backgrounds
+//================
+$body-bg: #1a0c58;
+$btn-bg: #0000ff7a;
+$btn-hvr-bg: red;
+
+html,
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background: $body-bg;
+}
+
+//############################################
+//################# settings #################
+//############################################
+
+.active {
+  background: red;
+}
+
+ul {
+  z-index: 3;
+  list-style: none;
+  display: flex;
+
+  li {
+    margin: 0 5px;
+    padding: 10px 25px;
+    background: $btn-bg;
+    color: $main-c;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 2px;
+
+    &:hover {
+      transform: scale(0.9);
+      background: $btn-hvr-bg;
+      -webkit-transform: scale(0.9);
+      -moz-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+      -o-transform: scale(0.9);
+    }
+  }
+}
+
+img {
+  width: 300px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  -webkit-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.75);
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  min-height: 100vh;
+
+  &-btns {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .products {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+  }
+
+  .itembox {
+    position: relative;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+      z-index: 2;
+      -webkit-transform: scale(1.2);
+      -moz-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+      -o-transform: scale(1.2);
+    }
+  }
+}

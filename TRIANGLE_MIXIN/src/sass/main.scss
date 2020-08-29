@@ -1,0 +1,31 @@
+@import "reset";
+@import "mixins";
+@import "vars";
+
+body {
+  background: rgb(53, 52, 52);
+}
+
+.container {
+  padding: 40px;
+
+  h1 {
+    text-align: center;
+
+    a {
+      color: lightgrey;
+      text-decoration: none;
+
+      &:hover {
+        transition: 0.3s;
+        color: tomato;
+      }
+    }
+  }
+  p {
+    padding: 0 20px;
+    color: grey;
+    @include triangle(after, 1em, left, red);
+    @include triangle(before, 1em, right, #008000, 97%);
+  }
+}

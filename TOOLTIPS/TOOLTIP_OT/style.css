@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,300,400');
+
+
+/* -- link do tutki:
+    https://www.youtube.com/watch?v=7rZPipkO8PE&t=16s
+*/
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: #333435;
+}
+
+/* --------   ul STYLING   -----------  */
+ul 
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow: -1px 4px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 0px rgba(0,0,0,0.75);
+}
+
+ul li
+{
+    position: relative;
+    padding: 20px 30px;
+    list-style-type: none;
+    background: #11202b;
+    font-size: 3em;
+    color: #333333;
+    transition: .5s;
+}
+
+ul li:hover
+{
+  color: #ffc30b;
+  cursor: pointer;
+}
+
+ul li span 
+{ 
+    position: absolute;
+    top: -35px;
+    left: 10%;
+    font-size: 16px;
+    width: 80px;
+    height: 24px;
+    line-height: 24px;
+    border: 1px solid #4d1313;
+    border-radius: 4px;
+    text-align: center;
+    background: #ffc30b;
+    color: #262626;
+    font-family: 'Muli';
+    transition: .5s;
+    opacity: 0;              /* --- kluczowe --- */
+    visibility: hidden;
+    -webkit-box-shadow: -1px 4px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -1px 4px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: -1px 4px 19px 0px rgba(0,0,0,0.75);
+}
+
+ul li:hover span  /* --- KLUCZOWE ---  */
+{
+    opacity: .5;    
+    visibility: visible;
+    transform: translateY(50%); /* --- fajna animacja --- */
+}
+
+
+/*  ----- wykonanie trójkącika ----- */
+ul li span::before
+{
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: rotate(45deg) translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #ffc30b;
+    z-index: -1; /* ---- spowodowalo schowanie sie trójkącika*/
+}
+

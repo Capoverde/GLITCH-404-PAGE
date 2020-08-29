@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+*, *::before, *::after
+{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+:root
+{
+    --bd-bg: grey;
+    --bd-bg-night: #00151f;
+    --tgl-bg: grey;
+    --tgl-bd: #404040;
+}
+
+body
+{
+    background: var(--bd-bg);
+    font-family: 'Muli';
+    transition: .5s;
+}
+
+body.night
+{
+    background: var(--bd-bg-night) ;
+}
+
+.toggle
+{
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    background: var(--tgl-bg);
+    border: 2px solid var(--tgl-bd);
+    width: 45px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    
+}
+
+.toggle.tgnight
+{
+    background: var(--bd-bg-night) ;
+    border: 2px solid #ffc30b;
+}
+
+.toggle::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 16px;
+    height: 16px;
+    background: var(--tgl-bd);
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.toggle.active::before
+{
+    left: 23px;
+    background: #ffc30b;
+}
+
+.content
+{
+    margin: 100px;
+}
+
+.content h1
+{
+    padding-bottom: 20px;
+    transition: .5s;
+}
+
+body.night .content h1
+{
+    color: #ffc30b;
+}
+
+.content p
+{
+    transition: .5s;
+    font-size: 18px;
+}
+
+body.night .content p
+{
+    color: #ffc30b;
+}

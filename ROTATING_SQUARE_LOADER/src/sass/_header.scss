@@ -1,0 +1,25 @@
+
+
+header{
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  height: 20vh;
+  background: map-get($page-colors, header);
+  box-shadow: $hbxs;
+
+  h1{
+    text-align: center;
+    line-height: 20vh;
+    font-size: 3rem;
+    font-family: 'Permanent Marker';
+    a{
+      color: darken(map-get($page-colors, main-c),5);
+
+      &:hover{
+        transition: .3s;
+        color: map-get($page-colors, main-c )
+      }
+    }
+  }
+}

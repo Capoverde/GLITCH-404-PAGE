@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:100,300,400|Muli:200,300,400");
+*,
+::before,
+::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background: url("../../assets/img/bgJ-1.jpg");
+  font-family: "Lato";
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: #262626;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 0 100px #36163b91;
+          box-shadow: 0 0 0 100px #36163b91;
+}
+
+input {
+  opacity: 0;
+}
+
+input,
+.toggle {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  bottom: 20px;
+  right: 20px;
+  outline: none;
+  z-index: 10;
+}
+
+.toggle {
+  pointer-events: none;
+  border-radius: 50%;
+  background: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  text-align: center;
+  line-height: 50px;
+  font-size: 36px;
+  -webkit-box-shadow: 0 0 0px #df77f1;
+          box-shadow: 0 0 0px #df77f1;
+}
+
+input:checked ~ .toggle {
+  -webkit-box-shadow: 0 0 0 500px #df77f1;
+          box-shadow: 0 0 0 500px #df77f1;
+  -webkit-transform: rotate(225deg);
+          transform: rotate(225deg);
+}
+
+.imgBox,
+.details {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.details {
+  padding: 20px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 11;
+  pointer-events: none;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.details h2 {
+  padding-bottom: 10px;
+  color: #fff;
+  z-index: 13;
+}
+
+input:checked ~ .details {
+  opacity: 1;
+  -webkit-transition-delay: 0.5s;
+          transition-delay: 0.5s;
+}
+
+.socials {
+  width: auto;
+  height: auto;
+  position: absolute;
+  bottom: 10%;
+  left: 10%;
+  z-index: 12;
+}
+
+.socials .fab {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.socials .fab:hover {
+  color: #fff;
+}
+/*# sourceMappingURL=main.min.css.map */

@@ -1,0 +1,50 @@
+@import "reset";
+@import "vars";
+@import "mixins";
+@import "header";
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  margin-top: 150px;
+  position: relative;
+  width: 360px;
+  height: 640px;
+  transform: rotate(-30deg) skew(25deg) scale(0.8);
+  transition: 0.5s;
+
+  &:hover {
+    img:nth-child(4) {
+      transition: 0.5s ease-in-out;
+      transform: translate(160px, -160px);
+      opacity: 1;
+    }
+    img:nth-child(3) {
+      transition: 0.5s ease-in-out;
+      transform: translate(120px, -120px);
+      opacity: 0.8;
+    }
+    img:nth-child(2) {
+      transition: 0.5s ease-in-out;
+      transform: translate(80px, -80px);
+      opacity: 0.6;
+    }
+    img:nth-child(1) {
+      transition: 0.5s ease-in-out;
+      transform: translate(40px, -40px);
+      opacity: 0.4;
+    }
+  }
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}

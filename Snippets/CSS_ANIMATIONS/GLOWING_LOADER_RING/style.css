@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+/* ---- VARIABLES DECLARATION ---- */
+
+:root
+{
+    /* -- COLORS -- */
+    --font-c: #ffc30b;
+    --span-c: #ffc30b;
+    --body-bg: #363636;
+    --border-c: #3c3c3c;
+}
+
+/* --- CSS RESET --- */
+
+*
+{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+}
+
+body
+{
+    background: var(--body-bg);
+}
+
+h1
+{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--font-c);
+    font-family: 'Raleway';
+    text-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+/* --- TOOLTIP STYLING --- */
+
+#tooltip
+{
+    position: relative;
+    margin-top:30 %;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--font-c);
+    font-size: 10px;
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+    border: 1px solid var(--font-c);
+    visibility: visible;
+    opacity: 1;
+    transition: .5s;
+}
+
+a h1:hover #tooltip
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.ring
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 150px;
+    height: 150px;
+    background: transparent;
+    border: 3px solid var(--border-c);
+    border-radius: 50%;
+    text-align: center;
+    line-height: 150px;
+    font-family: 'Raleway';
+    font-size: 20px;
+    color: var(--font-c);
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px var(--font-c);
+    box-shadow: 0 0 20px rgba(0,0,0,.5);
+}
+
+.ring::before
+{
+    content: '';
+    position: absolute;
+    top:-3px;
+    left: -3px;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    border-top: 3px solid var(--font-c);
+    border-right: 3px solid var(--font-c);
+    border-radius: 50%;
+    animation: animateCircle 2s linear infinite;
+}
+
+#ring_span
+{
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+}
+
+#ring_span::before
+{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--font-c);
+    top: -6px;
+    right: -8px;
+    box-shadow: 0 0 20px var(--font-c);
+}
+
+/* --- MEDIA QUERIES --- */
+
+@keyframes animateCircle
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(45deg);
+    }
+    100%
+    {
+        transform: rotate(405deg);
+    }
+}

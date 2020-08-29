@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap&subset=latin-ext");
+@import "./partials/mixins";
+
+// -------------- variables -------------- //
+// backgrounds:
+$body-bg: #161616;
+
+// colors:
+$main-c: #dddddd;
+$hero-c: #ffc600;
+
+// ------------- settings -------------- //
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background: $body-bg;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+// ------------- core ------------ //
+
+.glitch {
+  color: $main-c;
+  @include fluidSize(100px, 200px);
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  font-weight: weigth(semi-bold);
+
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 red;
+    top: 0;
+    color: #ffffff;
+    background: $body-bg;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+    -webkit-animation: noise-anim 2s infinite linear alternate-reverse;
+  }
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 blue;
+    top: 0;
+    color: #ffffff;
+    background: $body-bg;
+    overflow: hidden;
+    clip: rect(0, 900px, 0, 0);
+    animation: noise-anim 3s infinite linear alternate-reverse;
+    -webkit-animation: noise-anim 3s infinite linear alternate-reverse;
+  }
+}
+
+// -------- keyframes -------- //
+@keyframes noise-anim {
+  $steps: 20;
+  @for $i from 0 through $steps {
+    #{percentage($i*(1/$steps))} {
+      clip: rect(random(100) + px, 9999px, random(100) + px, 0);
+    }
+  }
+}

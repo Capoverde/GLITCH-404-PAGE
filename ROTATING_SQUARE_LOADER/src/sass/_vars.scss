@@ -1,0 +1,24 @@
+// ----- COLORS ---- //
+// ---- page color map ---- //
+$page-colors: (
+  header:#000,
+  link-hov: rgb(245, 13, 13),
+  main-c: #ffc600,
+  body-bg: #131b30,
+  font-c: #ddd
+
+);
+
+// ---- loader color map ---- //
+$loader-colors: (
+  bg: red,
+  before: #fff,
+  before1: #ff0,
+  before2: #2daff2,
+  before3: rgb(17, 194, 141),
+  before4: rgb(146, 27, 214)
+);
+
+
+// other
+$hbxs: 0 5px 20px 0px rgba(0,0,0,.5);

@@ -1,0 +1,38 @@
+// ----------------------------------
+//          GLOBAL VARIABLES
+// ----------------------------------
+
+$min_width: 320px;
+$max_width: 1200px;
+$min_font: 16px;
+$max_font: 24px;
+
+// --- Background color palette -- //
+
+$backgrounds: (
+  main: #746d6d,
+  container: rgba(0, 0, 0, .1)
+);
+
+@each $el, $bg in $backgrounds {
+  #{$el} {
+    background-color: $bg;
+  }
+  .#{$el} {
+    background-color: $bg;
+  }
+}
+
+// --- color palette -- //
+
+$colors: (
+  a: rgb(211, 41, 11),
+  h1: rgb(221, 48, 17),
+  p: #dddddd
+);
+
+@each $el, $color in $colors {
+  #{$el} {
+    color: $color;
+  }
+}

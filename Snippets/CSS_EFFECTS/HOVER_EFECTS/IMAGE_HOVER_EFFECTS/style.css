@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:100,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+:root
+{
+    /*  --- COLORS --- */
+    --body-bg: #2b3749;
+    --h1-c: #ffc30b;
+    --font-c: #fff;
+    --box-bg: #262626;
+    --span-bg: rgba(238, 238, 238, 0.2);
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background: var(--body-bg);
+}
+
+a
+{
+    text-decoration: none;
+}
+
+
+a h1
+{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--h1-c);
+    font-family: 'Raleway';
+    text-shadow: 2px 2px 3px rgba(0,0,0,.75);
+}
+
+
+a h1:hover
+{
+    color: yellow;
+}
+
+.box
+{
+    position: absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 240px;
+    height: 320px;
+    background: var(--box-bg);
+    padding: 15px;
+    box-sizing: border-box;
+    transition: .5s;
+    overflow: hidden;
+    box-shadow: 0 10px 15px rgba(0,0,0,.5);
+}
+
+.box:hover
+{
+    box-shadow: 0 25px 30px rgba(0,0,0,.5);
+    cursor: zoom-in;
+}
+
+.box p
+{
+    margin: 0;
+    padding: 0;
+    color: var(--font-c);
+    font-family: 'Raleway';
+    font-weight: 100;
+    font-size: 14px;
+    transition: .5s;
+    transition-delay: .2s;
+    transform: scale(.8);
+}
+
+.box::before
+{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 0;
+    left: 0;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    opacity: 0;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+.box::after
+{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    bottom: 0;
+    right: 0;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    opacity: 0;
+    transition: .5s;
+    box-sizing: border-box;
+}
+
+.box:hover::before
+{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.box:hover::after
+{
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+.box:hover p
+{
+    transform: scale(1);
+}
+
+
+.box span
+{
+    position: absolute;
+    top: 0;
+    left: -120%;
+    height: 100%;
+    width: 100%;
+    background: var(--span-bg);
+    transition: .5s;
+    transform: skewX(5deg);
+}
+
+.box:hover span
+{
+    left: 120%;
+}
