@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400|Muli:200,300,400');
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bd-bg: #363636;
+  --hero-c: #ffc30b;
+}
+
+body {
+  background: var(--bd-bg);
+  font-family: 'Lato';
+}
+
+/* ------------------------------------------- */
+
+section {
+  width: 100%;
+  height: 50vh;
+}
+
+section:nth-child(odd) {
+  background-color: #ddd;
+}
+
+section:nth-child(even) {
+  background-color: #363636;
+}
+
+#TOP {
+  position: fixed;
+  width: 50px;
+  height: 50px;
+  right: 3%;
+  bottom: 10%;
+  background: red;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 50px;
+  font-size: 16px;
+  color: #dddddd;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 37px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 0px 37px 1px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0px 37px 1px rgba(0, 0, 0, 0.75);
+}
